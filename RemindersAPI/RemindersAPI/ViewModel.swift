@@ -6,7 +6,7 @@
 //
 
 import Foundation
-//import EventKit
+//import EventKit // ReminderAPIModelのみでOK
 
 final class ViewModel {
     static let shared = ViewModel()

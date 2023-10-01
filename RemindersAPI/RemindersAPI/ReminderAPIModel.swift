@@ -54,13 +54,19 @@ final class ReminderAPIModel {
         
         // 通知と期限の設定
         let calendar = Calendar.current
-        let tenMinutesLater_Date = calendar.date(byAdding: .minute, value: 1, to: Date())!
+        let tenMinutesLater_Date = calendar.date(byAdding: .minute, value: 1, to: Date())! // force unwrap
         let alarm = EKAlarm(absoluteDate: tenMinutesLater_Date)
         reminder.addAlarm(alarm) // 通知
         let tenMinutesLater_DC = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: tenMinutesLater_Date)
         reminder.dueDateComponents = tenMinutesLater_DC // 期限
         
         // コミット
-        try! store.save(reminder, commit: true)
+        do {
+            try store.save(reminder, commit: true)
+            print("リマインダーの作成に成功しました。")
+        } catch {
+            print("error:", error)
+            print("リマインダーの作成に失敗しました。")
+        }
     }
 }

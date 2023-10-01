@@ -20,8 +20,7 @@
 ///
 
 import SwiftUI
-
-import EventKit
+//import EventKit // ReminderAPIModelのみでOK
 
 struct ContentView: View {
     let vm = ViewModel.shared
