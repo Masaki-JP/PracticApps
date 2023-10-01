@@ -9,7 +9,7 @@
 /// EventKitよりAPIが提供される。
 ///
 /// 以下を想定
-/// iOS17以前とiOS17以降
+/// iOS17より前とiOS17以降
 /// アクセス許可
 ///
 /// TargetのInfoに「Privacy - Reminders Full Access Usage Description」と「Privacy - Reminders Usage Description」の二つのKeyを追加し、Valueにアクセス許可の際の文言を記述する。
