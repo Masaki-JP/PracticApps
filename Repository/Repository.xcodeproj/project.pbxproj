@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C2A1E352B5C7DA2006BEFEB /* MockContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2A1E342B5C7DA2006BEFEB /* MockContentViewModel.swift */; };
+		4C2A1E372B5C7DE7006BEFEB /* InMemoryUserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2A1E362B5C7DE7006BEFEB /* InMemoryUserDefaultsRepository.swift */; };
 		4CE4C0C42B5C3EB000CB9EF5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE4C0C32B5C3EB000CB9EF5 /* ContentView.swift */; };
 		4CE4C0C62B5C3EB100CB9EF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CE4C0C52B5C3EB100CB9EF5 /* Assets.xcassets */; };
 		4CE4C0C92B5C3EB100CB9EF5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CE4C0C82B5C3EB100CB9EF5 /* Preview Assets.xcassets */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C2A1E342B5C7DA2006BEFEB /* MockContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockContentViewModel.swift; sourceTree = "<group>"; };
+		4C2A1E362B5C7DE7006BEFEB /* InMemoryUserDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryUserDefaultsRepository.swift; sourceTree = "<group>"; };
 		4CE4C0BE2B5C3EB000CB9EF5 /* Repository.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Repository.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE4C0C32B5C3EB000CB9EF5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4CE4C0C52B5C3EB100CB9EF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +46,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C2A1E332B5C7D79006BEFEB /* ContentViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4CE4C13B2B5C5EF400CB9EF5 /* ContentViewModelProtcol.swift */,
+				4CE4C13D2B5C5F2200CB9EF5 /* ContentViewModel.swift */,
+				4C2A1E342B5C7DA2006BEFEB /* MockContentViewModel.swift */,
+			);
+			path = ContentViewModel;
+			sourceTree = "<group>";
+		};
+		4C2A1E382B5C7DF1006BEFEB /* UserDefaultsRepository */ = {
+			isa = PBXGroup;
+			children = (
+				4CE4C1332B5C5D6100CB9EF5 /* UserDefaultsRepository.swift */,
+				4C2A1E362B5C7DE7006BEFEB /* InMemoryUserDefaultsRepository.swift */,
+			);
+			path = UserDefaultsRepository;
+			sourceTree = "<group>";
+		};
+		4C2A1E3A2B5C7E5D006BEFEB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4CE4C1312B5C5D4000CB9EF5 /* RepositoryProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		4CE4C0B52B5C3EB000CB9EF5 = {
 			isa = PBXGroup;
 			children = (
@@ -64,7 +95,7 @@
 				4CE4C12C2B5C5C6A00CB9EF5 /* Views */,
 				4CE4C12B2B5C5C6600CB9EF5 /* ViewModels */,
 				4CE4C12A2B5C5C6400CB9EF5 /* Models */,
-				4CE4C1292B5C5C6100CB9EF5 /* Protocols */,
+				4C2A1E3A2B5C7E5D006BEFEB /* Protocols */,
 				4CE4C1282B5C5C5E00CB9EF5 /* Others */,
 				4CE4C0C52B5C3EB100CB9EF5 /* Assets.xcassets */,
 				4CE4C0C72B5C3EB100CB9EF5 /* Preview Content */,
@@ -83,18 +114,9 @@
 		4CE4C1282B5C5C5E00CB9EF5 /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				4CE4C1332B5C5D6100CB9EF5 /* UserDefaultsRepository.swift */,
+				4C2A1E382B5C7DF1006BEFEB /* UserDefaultsRepository */,
 			);
 			path = Others;
-			sourceTree = "<group>";
-		};
-		4CE4C1292B5C5C6100CB9EF5 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				4CE4C13B2B5C5EF400CB9EF5 /* ContentViewModelProtcol.swift */,
-				4CE4C1312B5C5D4000CB9EF5 /* RepositoryProtocol.swift */,
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		4CE4C12A2B5C5C6400CB9EF5 /* Models */ = {
@@ -108,7 +130,7 @@
 		4CE4C12B2B5C5C6600CB9EF5 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				4CE4C13D2B5C5F2200CB9EF5 /* ContentViewModel.swift */,
+				4C2A1E332B5C7D79006BEFEB /* ContentViewModel */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -194,10 +216,12 @@
 			files = (
 				4CE4C1342B5C5D6100CB9EF5 /* UserDefaultsRepository.swift in Sources */,
 				4CE4C1302B5C5D0B00CB9EF5 /* Person.swift in Sources */,
+				4C2A1E372B5C7DE7006BEFEB /* InMemoryUserDefaultsRepository.swift in Sources */,
 				4CE4C1322B5C5D4000CB9EF5 /* RepositoryProtocol.swift in Sources */,
 				4CE4C0C42B5C3EB000CB9EF5 /* ContentView.swift in Sources */,
 				4CE4C13E2B5C5F2200CB9EF5 /* ContentViewModel.swift in Sources */,
 				4CE4C13C2B5C5EF400CB9EF5 /* ContentViewModelProtcol.swift in Sources */,
+				4C2A1E352B5C7DA2006BEFEB /* MockContentViewModel.swift in Sources */,
 				4CE4C12E2B5C5CA600CB9EF5 /* RepositoryApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

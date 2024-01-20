@@ -10,7 +10,7 @@ final class ContentViewModel<PersonRepository: RepositoryProtocol>: ContentViewM
             self.personRepository = repository
             self.persons = try fetchAllPersons()
         } catch {
-            errorCall(error)
+            errorPrint(error)
         }
     }
 
@@ -22,7 +22,7 @@ final class ContentViewModel<PersonRepository: RepositoryProtocol>: ContentViewM
             try savePersons(newPersons)
             persons = newPersons
         } catch {
-            errorCall(error)
+            errorPrint(error)
         }
     }
 
@@ -38,7 +38,7 @@ final class ContentViewModel<PersonRepository: RepositoryProtocol>: ContentViewM
             }
         } catch {
             persons = prePersons
-            errorCall(error)
+            errorPrint(error)
         }
     }
 

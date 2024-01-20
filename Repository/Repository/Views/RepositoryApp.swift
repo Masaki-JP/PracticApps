@@ -1,7 +1,17 @@
 import SwiftUI
 
-func errorCall(_ error: Error) {
-    print("💥 \(#function)\n\(error)")
+func errorPrint(
+    _ error: Error,
+    file: String = #file,
+    function: String = #function,
+    line: Int = #line
+) {
+    print("💥💥💥")
+    print("error: \(error) (\(type(of: error)))")
+    print("function: \(function)")
+    print("line: \(line)")
+    print("file: \(file)")
+    print("💥💥💥")
 }
 
 @main
@@ -9,7 +19,7 @@ struct RepositoryApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView(
-                viewModel: ContentViewModel<UserDefaultsRepository>(
+                viewModel: ContentViewModel(
                     repository: UserDefaultsRepository(userDefaultsKey: "person")
                 )
             )
