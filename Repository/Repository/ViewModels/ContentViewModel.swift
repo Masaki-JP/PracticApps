@@ -1,13 +1,13 @@
 import Foundation
 
 @MainActor
-final class ContentViewModel<PRepo: RepositoryProtocol>: ContentViewModelProtcol where PRepo.ItemType == Person {
+final class ContentViewModel<PersonRepository: RepositoryProtocol>: ContentViewModelProtcol where PersonRepository.ItemType == Person {
     @Published private(set) var persons: [Person] = []
-    private let repository: any PersonRepositoryProtocol
+    private let personRepository: PersonRepository
 
-    init(repository: any PersonRepositoryProtocol) {
+    init(repository: PersonRepository) {
         do {
-            self.repository = repository
+            self.personRepository = repository
             self.persons = try fetchAllPersons()
         } catch {
             print("💥", error)
@@ -43,10 +43,10 @@ final class ContentViewModel<PRepo: RepositoryProtocol>: ContentViewModelProtcol
     }
 
     private func savePersons(_ persons: [Person]) throws {
-        try repository.save(persons)
+        try personRepository.save(persons)
     }
 
     private func fetchAllPersons() throws -> [Person] {
-        return try repository.fetch()
+        return try personRepository.fetch()
     }
 }

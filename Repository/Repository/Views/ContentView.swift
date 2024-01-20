@@ -30,7 +30,7 @@ struct ContentView<ViewModel: ContentViewModelProtcol>: View {
 #Preview {
     ContentView(
         viewModel: ContentViewModel<UserDefaultsRepository>(
-            repository: MockUserDefaultsPersonRepository()
+            repository: UserDefaultsRepository(userDefaultsKey: "person")
         )
     )
 }

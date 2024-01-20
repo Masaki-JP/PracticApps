@@ -6,7 +6,7 @@ struct RepositoryApp: App {
         WindowGroup {
             ContentView(
                 viewModel: ContentViewModel<UserDefaultsRepository>(
-                    repository: UserDefaultsPersonRepository()
+                    repository: UserDefaultsRepository(userDefaultsKey: "person")
                 )
             )
         }
