@@ -14,9 +14,6 @@
 		4CE4C1302B5C5D0B00CB9EF5 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE4C12F2B5C5D0B00CB9EF5 /* Person.swift */; };
 		4CE4C1322B5C5D4000CB9EF5 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE4C1312B5C5D4000CB9EF5 /* RepositoryProtocol.swift */; };
 		4CE4C1342B5C5D6100CB9EF5 /* UserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE4C1332B5C5D6100CB9EF5 /* UserDefaultsRepository.swift */; };
-		4CE4C1362B5C5E1A00CB9EF5 /* PersonRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE4C1352B5C5E1A00CB9EF5 /* PersonRepositoryProtocol.swift */; };
-		4CE4C1382B5C5E8700CB9EF5 /* MockUserDefaultsPersonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE4C1372B5C5E8700CB9EF5 /* MockUserDefaultsPersonRepository.swift */; };
-		4CE4C13A2B5C5EC400CB9EF5 /* UserDefaultsPersonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE4C1392B5C5EC400CB9EF5 /* UserDefaultsPersonRepository.swift */; };
 		4CE4C13C2B5C5EF400CB9EF5 /* ContentViewModelProtcol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE4C13B2B5C5EF400CB9EF5 /* ContentViewModelProtcol.swift */; };
 		4CE4C13E2B5C5F2200CB9EF5 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE4C13D2B5C5F2200CB9EF5 /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -30,9 +27,6 @@
 		4CE4C12F2B5C5D0B00CB9EF5 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		4CE4C1312B5C5D4000CB9EF5 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		4CE4C1332B5C5D6100CB9EF5 /* UserDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepository.swift; sourceTree = "<group>"; };
-		4CE4C1352B5C5E1A00CB9EF5 /* PersonRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRepositoryProtocol.swift; sourceTree = "<group>"; };
-		4CE4C1372B5C5E8700CB9EF5 /* MockUserDefaultsPersonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaultsPersonRepository.swift; sourceTree = "<group>"; };
-		4CE4C1392B5C5EC400CB9EF5 /* UserDefaultsPersonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsPersonRepository.swift; sourceTree = "<group>"; };
 		4CE4C13B2B5C5EF400CB9EF5 /* ContentViewModelProtcol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModelProtcol.swift; sourceTree = "<group>"; };
 		4CE4C13D2B5C5F2200CB9EF5 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,8 +83,6 @@
 		4CE4C1282B5C5C5E00CB9EF5 /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				4CE4C1392B5C5EC400CB9EF5 /* UserDefaultsPersonRepository.swift */,
-				4CE4C1372B5C5E8700CB9EF5 /* MockUserDefaultsPersonRepository.swift */,
 				4CE4C1332B5C5D6100CB9EF5 /* UserDefaultsRepository.swift */,
 			);
 			path = Others;
@@ -101,7 +93,6 @@
 			children = (
 				4CE4C13B2B5C5EF400CB9EF5 /* ContentViewModelProtcol.swift */,
 				4CE4C1312B5C5D4000CB9EF5 /* RepositoryProtocol.swift */,
-				4CE4C1352B5C5E1A00CB9EF5 /* PersonRepositoryProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -206,11 +197,8 @@
 				4CE4C1322B5C5D4000CB9EF5 /* RepositoryProtocol.swift in Sources */,
 				4CE4C0C42B5C3EB000CB9EF5 /* ContentView.swift in Sources */,
 				4CE4C13E2B5C5F2200CB9EF5 /* ContentViewModel.swift in Sources */,
-				4CE4C1362B5C5E1A00CB9EF5 /* PersonRepositoryProtocol.swift in Sources */,
 				4CE4C13C2B5C5EF400CB9EF5 /* ContentViewModelProtcol.swift in Sources */,
 				4CE4C12E2B5C5CA600CB9EF5 /* RepositoryApp.swift in Sources */,
-				4CE4C1382B5C5E8700CB9EF5 /* MockUserDefaultsPersonRepository.swift in Sources */,
-				4CE4C13A2B5C5EC400CB9EF5 /* UserDefaultsPersonRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
