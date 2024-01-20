@@ -19,7 +19,7 @@ final class UserDefaultsRepository<Item: Codable>: RepositoryProtocol {
             let encodedData = try JSONEncoder().encode(items)
             UserDefaults.standard.set(encodedData, forKey: userDefaultsKey)
         } catch {
-            print("💥 \(#function)\n\(error)")
+            errorCall(error)
             throw UserDefaultsRepositoryError.encodingError
         }
     }
@@ -31,6 +31,7 @@ final class UserDefaultsRepository<Item: Codable>: RepositoryProtocol {
             let items = try JSONDecoder().decode([Item].self, from: itemsData)
             return items
         } catch {
+            errorCall(error)
             throw UserDefaultsRepositoryError.decodingError
         }
     }
