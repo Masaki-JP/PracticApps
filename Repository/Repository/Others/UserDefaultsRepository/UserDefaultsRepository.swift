@@ -1,7 +1,6 @@
 import Foundation
 
 final class UserDefaultsRepository<Item: Codable>: UserDefaultsRepositoryProtocol {
-    typealias ItemType = Item
     private let userDefaultsKey: String
 
     init(userDefaultsKey: String) {
