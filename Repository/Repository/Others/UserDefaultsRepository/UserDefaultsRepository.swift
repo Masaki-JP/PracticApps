@@ -1,7 +1,6 @@
 import Foundation
 
-final class UserDefaultsRepository<Item: Codable>: RepositoryProtocol {
-    typealias ItemType = Item
+final class UserDefaultsRepository<Item: Codable>: UserDefaultsRepositoryProtocol {
     private let userDefaultsKey: String
 
     init(userDefaultsKey: String) {
@@ -19,7 +18,7 @@ final class UserDefaultsRepository<Item: Codable>: RepositoryProtocol {
             let encodedData = try JSONEncoder().encode(items)
             UserDefaults.standard.set(encodedData, forKey: userDefaultsKey)
         } catch {
-            print("💥 \(#function)\n\(error)")
+            reportError(error)
             throw UserDefaultsRepositoryError.encodingError
         }
     }
@@ -31,6 +30,7 @@ final class UserDefaultsRepository<Item: Codable>: RepositoryProtocol {
             let items = try JSONDecoder().decode([Item].self, from: itemsData)
             return items
         } catch {
+            reportError(error)
             throw UserDefaultsRepositoryError.decodingError
         }
     }

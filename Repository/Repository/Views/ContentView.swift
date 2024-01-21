@@ -16,7 +16,7 @@ struct ContentView<ViewModel: ContentViewModelProtcol>: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("追加") {
-                        let num = Int.random(in: 10000...99999)
+                        let num = Int.random(in: 1000...9999)
                         viewModel.appendPerson(name: "No. \(num)")
                     }
                 }
@@ -30,7 +30,7 @@ struct ContentView<ViewModel: ContentViewModelProtcol>: View {
 #Preview {
     ContentView(
         viewModel: ContentViewModel<UserDefaultsRepository>(
-            repository: MockUserDefaultsPersonRepository()
+            repository: UserDefaultsRepository(userDefaultsKey: "person")
         )
     )
 }
